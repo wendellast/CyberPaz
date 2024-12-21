@@ -2,13 +2,17 @@
 
 {% block content %}
 
-
-<h1>Contato</h1>
-<form method="post">
+<form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
+    <label for="id_name">Nome:</label>
+    <input type="text" name="name" id="id_name" value="{{ form.name.value|default_if_none:'' }}">
+
+    <label for="id_email">E-mail:</label>
+    <input type="email" name="email" id="id_email" value="{{ form.email.value|default_if_none:'' }}">
+
+    <label for="id_message">Mensagem:</label>
+    <textarea name="message" id="id_message">{{ form.message.value|default_if_none:'' }}</textarea>
+
     <button type="submit">Enviar</button>
 </form>
-
-
 {% endblock content %}
