@@ -68,18 +68,19 @@ python manage.py migrate
 Rode esse comando pra cria um usuario admin e poder acessar a zona admistrativa para gerenciamento de dados.
 
 ```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-
-### 7. Execução do Projeto
-Após instalar as dependências, você pode rodar o projeto:
-
-```bash
 python manage.py createsuperuser
 ```
 
 Depois acesse a rota do admin e faça o login com email e senha que você cadastrou
+
+### 7. Execução do Projeto
+
+Após instalar as dependências, você pode rodar o projeto:
+
+
+```bash
+python manage.py runserver
+```
+
 
 O servidor de desenvolvimento será iniciado e você poderá acessar o projeto em `http://localhost:8000/`.
